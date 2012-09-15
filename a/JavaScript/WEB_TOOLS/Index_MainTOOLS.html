@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+      JavaScript/HTML格式化
+    </title>
+    <link href="toolsite.css" rel="stylesheet" type="text/css">
+    <script src="globals.js" type="text/javascript"></script>
+    <script src="base.js" type="text/javascript"></script>
+    <script src="jsformat.js" type="text/javascript"></script>
+    <script src="htmlformat.js" type="text/javascript"></script>
+    <link rel="Stylesheet" type="text/css" href="topbar.css">
+    <script language="JavaScript">
+      if (self != top) {
+        top.location = self.location;
+      }
+    </script>
+    <script type="text/javascript" src="chinaz_top.js" charset="utf-8"></script>
+  </head>
+  
+  <body>
+    <div class="wrap">
+      <!--top-->
+      <script type="text/javascript">
+        var chinazTopBarMenu = {
+          create: function(target, menucontents) {
+            if (!document.getElementById(menucontents)) {
+              return;
+            }
+            var contents_wrap = document.getElementById(menucontents);
+            var contents = contents_wrap.innerHTML;
+           		target.className += " hover";
+            var dropdownmenu_wrap = document.createElement("div");
+            	dropdownmenu_wrap.className = "dropdownmenu-wrap";
+            var dropdownmenu = document.createElement("div");
+            	dropdownmenu.className = "dropdownmenu";
+            	dropdownmenu.style.width = "auto";
+            var dropdownmenu_inner = document.createElement("div");
+				dropdownmenu_inner.className = "dropdownmenu-inner";
+				dropdownmenu_wrap.appendChild(dropdownmenu);
+				dropdownmenu.appendChild(dropdownmenu_inner);
+				dropdownmenu_inner.innerHTML = contents;
+            if (target.getElementsByTagName("div").length == 0) {
+              target.appendChild(dropdownmenu_wrap);
+            }
+          },
+          clear: function(target) {
+            target.className = target.className.replace(" hover", "");
+          }
+        }
+      </script>
+    
+      <!--sub menu-->
+      <!--main-->
+      <div class="main">
+        <script type="text/javascript">
+          function do_js_beautify() {
+            document.getElementById('beautify').disabled = true;
+            js_source = document.getElementById('content').value.replace(/^\s+/, '');
+            tabsize = document.getElementById('tabsize').value;
+            tabchar = ' ';
+            if (tabsize == 1) {
+              tabchar = '\t';
+            }
+            if (js_source && js_source.charAt(0) === '<') {
+              document.getElementById('content').value = style_html(js_source, tabsize, tabchar, 80);
+            } else {
+              document.getElementById('content').value = js_beautify(js_source, tabsize, tabchar);
+            }
+            document.getElementById('beautify').disabled = false;
+            return false;
+          }
+          function pack_js(base64) {
+            var input = document.getElementById('content').value;
+            var packer = new Packer;
+            if (base64) {
+              var output = packer.pack(input, 1, 0);
+            } else {
+              var output = packer.pack(input, 0, 0);
+            }
+            document.getElementById('content').value = output;
+          }
+          function Empty() {
+            document.getElementById('content').value = '';
+            document.getElementById('content').select();
+          }
+          function GetFocus() {
+            document.getElementById('content').focus();
+          }
+        </script>
+        <form>
+          <div class="box">
+            <div id="b_1">          
+              <div class="box1">
+              	<div style=" background: #CAE3EE;">
+                <div align="center" style="color:#006AAD;font-size:16px;font-weight:bold;">
+                  JavaScript/HTML格式化
+                </div>
+                 <div style="margin:10px auto; text-align:center;">
+                  <select name="tabsize" id="tabsize">
+                    <option value="1">
+                      制表符缩进
+                    </option>
+                    <option value="2">
+                      2个空格缩进
+                    </option>
+                    <option value="4" selected="selected">
+                      4个空格缩进
+                    </option>
+                    <option value="8">
+                      8个空格缩进
+                    </option>
+                  </select>
+                  <input class="but2" type="button" value="格式化" onclick="return do_js_beautify()"
+                  id="beautify">
+                  <input class="but2" type="button" value="普通压缩" onclick="pack_js(0)">
+                  <input class="but2" type="button" value="加密压缩" onclick="pack_js(1)">
+                  <input class="but2" type="button" value="清空结果" onclick="Empty();">
+                </div>
+                <div>
+                <div align="center" style="padding-top:10px;">
+                  <textarea id="content" name="content" style="width:100%;border:1px solid #c5e2f2;height:100%; overflow:visible;"
+                  cols="20" rows="50">
+                  </textarea>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </form>
+        <script type="text/javascript">
+          setTimeout("GetFocus();", 10)
+        </script>
+        <div class="box">
+          <div style=" height:5px;">
+          </div>
+        </div>
+      </div>
+      <div onmouseout="BoxHide()" onmouseover="this.style.display=&#39;block&#39;"
+      id="ToolBox" style="display: none; ">
+        <div id="xhead">
+        </div>
+        <ul id="xlist">
+        </ul>
+        <div id="xfoot">
+        </div>
+      </div>
+      <script type="text/javascript">
+        Init();
+      </script>
+   
+      <link href="topbar.css" type="text/css" rel="Stylesheet">
+      <link href="dialog.css" type="text/css" rel="Stylesheet">
+      <div class="foot">
+      </div>
+    </div>
+    <a style="display: none; " id="exifview-absolute-url-convert-proxy" href="http://tool.chinaz.com/Tools/dummy">
+    </a>
+  </body>
+
+</html>
