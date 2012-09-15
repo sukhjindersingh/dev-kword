@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       kick
-// @namespace   
+// @namespace  
 // @version    0.1
 // @description  enter something useful
 // @include    http://*/*
