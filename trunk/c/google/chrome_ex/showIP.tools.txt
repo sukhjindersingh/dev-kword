@@ -1,0 +1,15 @@
+http://www.hujuntao.com/api/ip/ip.php?ip=220.18.235.25&format=js
+
+
+
+	/// 获取IP地址物理地址名称
+	function getIpAddressName(ips){
+	 console.log('error kick');
+		var addresName="";
+		
+
+		$.get("http://www.hujuntao.com/api/ip/ip.php?ip=220.18.235.25&format=js",function(result){
+		   alert(result);		
+		});
+		return addresName;
+	};
