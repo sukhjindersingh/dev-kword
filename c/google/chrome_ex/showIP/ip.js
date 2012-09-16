@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 			console.log(res);
 
-			$("body").append("<div id=\"tqShowIP\" class=\"tqShowIP_" + gloabalSetPosition + "\">City:"+city+"<br />Type:"+type+"<br />Ip:"+ip+"</div>");
+			$("body").append("<div id=\"tqShowIP\" class=\"tqShowIP_" + gloabalSetPosition + "\">"+city+"<br />"+type+"<br />   "+ip+"</div>");
 
 		});
 	};//EDN getIpaddressName func...

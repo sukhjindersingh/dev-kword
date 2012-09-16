@@ -22,5 +22,4 @@
 
 .tqShowIP_left {
 	left:			0.01%;
-	border-right:	0px;
 }
