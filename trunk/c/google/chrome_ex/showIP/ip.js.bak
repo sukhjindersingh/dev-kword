@@ -9,7 +9,7 @@ $(document).ready(function() {
 	useRightList.push( 'plus.google.com' );
 	useRightList.push( 'www.facebook.com' );
 		
-	gloabalSetPosition = ( $.inArray( window.location.host, useRightList ) >= 0 ) ? 'left' : 'right';
+	gloabalSetPosition = ( $.inArray( window.location.host, useRightList ) >= 0 ) ? 'right' : 'left';
 
 
 	chrome.extension.sendRequest( {}, function(response) {
