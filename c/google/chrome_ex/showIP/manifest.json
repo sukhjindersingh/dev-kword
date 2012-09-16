@@ -1,0 +1,25 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "ip.css" ],
+      "js": [ "jquery-1.7.1.min.js", "ip.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Show IPv4 & IPv6 addresses of the current webpage without doing external requests to a home server.",
+   "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_016.png",
+      "48": "icons/icon_048.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmPW5CioxCuzjm0qqVumLrC/U1b8lC+R0OUtiFh4V6LlJqOzmSHc+YLExSgQEv7RAkltoLSJFC6ZAjgL3af2N7vagJXIJbc0d86X5OomNbwuro/SCkc5NdYqTKbZf1FXxJWSGfTv46lzB1P5kf3UOVLk3aW+nMt1osPtL8DBV9yQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "18",
+   "name": "ShowIp",
+   "permissions": [ "webRequest", "*://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

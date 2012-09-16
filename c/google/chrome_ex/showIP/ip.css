@@ -1,0 +1,23 @@
+#tqShowIP {
+	z-index:		99999;
+	color:			#2b2b2b;
+	background:		#f7f4f4;
+	font-family:	'Arial', Helvetica, sans-serif;
+	font-size:		12px;
+	text-align:     right;
+ /* bottom:			0px;*/
+    top:            0px; 	
+	position:		fixed;
+	padding:		1px;
+	border:			#a6a6a6 solid 1px;
+	border-bottom:	0px;
+	cursor:			default;
+}
+
+.tqShowIP_right {
+	right:			0.01%;
+}
+
+.tqShowIP_left {
+	left:			0.01%;
+}
