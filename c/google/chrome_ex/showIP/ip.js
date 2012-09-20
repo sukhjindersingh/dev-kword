@@ -1,13 +1,14 @@
-// (C) TEQneers GmbH & Co. KG
-// Made by Stephan Ferraro, 2012 Stuttgart, Germany
-// E-Mail: support {at} teqneers.de
+//show ip and address by city type
+// (C) kick.smiles@gmail.com @jeskick
+// Made by stp freeen, 2012 sun 10.
+// E-Mail: kick.smiles@gmail.com
 
 $(document).ready(function() {
 	var gloabalSetPosition;	
 	var useRightList		= [];
 
-	useRightList.push( 'plus.google.com' );
-	useRightList.push( 'www.facebook.com' );
+	useRightList.push( 'www.google.com' );
+	useRightList.push( 'weibo.com/jeskick' );
 		
 	gloabalSetPosition = ( $.inArray( window.location.host, useRightList ) >= 0 ) ? 'right' : 'left';
 
@@ -22,19 +23,18 @@ $(document).ready(function() {
 	
 	});//// END sendRequest func...
 	
-	$("#tqShowIP").live("mouseover", function() {
-		if ($(this).hasClass('tqShowIP_right')) {
-			$(this).removeClass("tqShowIP_right");
-			$(this).addClass("tqShowIP_left");
+	$("#k_ipshow").live("mouseover", function() {
+		if ($(this).hasClass('k_ipshow_r')) {
+			$(this).removeClass("k_ipshow_r");
+			$(this).addClass("k_ipshow_l");
 		}
 		else {
-			$(this).removeClass("tqShowIP_left");
-			$(this).addClass("tqShowIP_right");
+			$(this).removeClass("k_ipshow_l");
+			$(this).addClass("k_ipshow_r");
 		}
 	});
 
-
-	 /// 获取IP地址物理地址名称
+	 /// 获取IP地址物理地址名称  www.hujuntao.com/api/ip/ip.php?ip?&format=?
 	function getIpAddressName(ips){
 
 		$.get("http://www.hujuntao.com/api/ip/ip.php?ip="+ips+"&format=json",function(result){
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 			console.log(res);
 
-			$("body").append("<div id=\"tqShowIP\" class=\"tqShowIP_" + gloabalSetPosition + "\">"+city+"<br />"+type+"<br />   "+ip+"</div>");
+			$("body").append("<div id=\"k_ipshow\" class=\"k_ipshow" + gloabalSetPosition + "\"><span id='_k'>by kick </span>"+city+"<br />"+type+"<br />   "+ip+"</div>");
 
 		});
 	};//EDN getIpaddressName func...

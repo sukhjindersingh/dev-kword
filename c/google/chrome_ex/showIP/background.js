@@ -1,10 +1,11 @@
-// (C) TEQneers GmbH & Co. KG
-// Made by Stephan Ferraro, 2012 Stuttgart, Germany
-// E-Mail: support {at} teqneers.de
+//show ip and address by city type
+// (C) kick.smiles@gmail.com @jeskick
+// Made by stp freeen, 2012 sun 10.
+// E-Mail: kick.smiles@gmail.com
 
 var currentIPList	= {};
 
-// Save all IP addresses by URLs in a temporary object
+// Save all IP addresses by URLs in a object
 chrome.webRequest.onCompleted.addListener(
   function(info) {
 	  currentIPList[ info.url ] = info.ip;
@@ -27,13 +28,13 @@ chrome.extension.onRequest.addListener(
 				domainToIP: currentIPList[ currentURL ]
 			} );
 		} else {
-			// IP not found in array (maybe an iframe has been loaded).
+			// IP not found in array
 			sendResponse( {
 				domainToIP: null
 			} );
 		}
 
-		// Reset temporary object
+		// Reset  object
 		currentIPList	= {};
 	}
 );
