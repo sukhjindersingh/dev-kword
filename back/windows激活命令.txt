@@ -1,0 +1,2 @@
+管理员方式运行 命令窗口
+slmgr.vbs -ipk BYXV8-9YN72-VTF7H-8G7PT-WW8X2
