@@ -1,0 +1,119 @@
+{
+  "name": "Chrome Gestures",
+  "version": "1.12.1.5",
+  "normal_actions": {
+    "#FlipBack": {
+      "name": "back",
+      "args": []
+    },
+    "#FlipForward": {
+      "name": "forward",
+      "args": []
+    },
+    "L": {
+      "name": "back",
+      "args": []
+    },
+    "DL": {
+      "name": "close other tabs",
+      "args": []
+    },
+    "UL": {
+      "name": "select left tab",
+      "args": []
+    },
+    "UR": {
+      "name": "select right tab",
+      "args": []
+    },
+    "R": {
+      "name": "forward",
+      "args": []
+    },
+    "DU": {
+      "name": "cacheless reload",
+      "args": []
+    },
+    "UD": {
+      "name": "reload all tabs",
+      "args": []
+    },
+    "DRU": {
+      "name": "open blank tab",
+      "args": []
+    },
+    "DR": {
+      "name": "close this tab",
+      "args": []
+    },
+    "DRD": {
+      "name": "re-open closed tab",
+      "args": []
+    },
+    "LDRU": {
+      "name": "close this window",
+      "args": []
+    },
+    "D": {
+      "name": "scroll down full page",
+      "args": []
+    },
+    "U": {
+      "name": "scroll up full page",
+      "args": []
+    },
+    "LR": {
+      "name": "scroll to top",
+      "args": []
+    },
+    "RL": {
+      "name": "scroll to bottom",
+      "args": []
+    }
+  },
+  "linkdrag_actions": {
+    "R": {
+      "name": "open in new tab",
+      "args": []
+    },
+    "L": {
+      "name": "open in background tab",
+      "args": []
+    },
+    "LDR": {
+      "name": "copy text",
+      "args": []
+    },
+    "RDL": {
+      "name": "copy url",
+      "args": []
+    }
+  },
+  "textdrag_actions": {
+    "L": {
+      "name": "search with #1 in background tab",
+      "args": [
+        "http://www.google.com/search?q=%s",
+        "Google"
+      ]
+    },
+    "R": {
+      "name": "search with #1 in current tab",
+      "args": [
+        "http://www.google.com/search?q=%s",
+        "Google"
+      ]
+    }
+  },
+  "mouse_track": true,
+  "visualized_arrow": true,
+  "superdrag": true,
+  "useMousewheel": true,
+  "useTabList": true,
+  "useSmoothScroll": true,
+  "ScrollSpeedValue": 0.8,
+  "useScrollAcceleration": true,
+  "AccelerationValue": 10,
+  "suppress_contextmenu": true,
+  "minimumUnit": 15
+}

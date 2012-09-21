@@ -1,0 +1,7 @@
+YouTube HD Suite
+YouTube HD Lite Revived
+
+
+http://userscripts.org/scripts/source/25105.user.js
+
+http://userscripts.org/scripts/source/62634.user.js

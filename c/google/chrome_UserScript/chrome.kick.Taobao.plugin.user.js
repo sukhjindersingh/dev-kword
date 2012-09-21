@@ -6,6 +6,7 @@
 // @include    http*://design.taobao.com/*
 // @require    http://code.jquery.com/jquery-1.6.min.js
 // @copyright  2011+, kick
+// @link       https://code.google.com/p/dev-kword/
 // ==/UserScript==
 
 (function(window,document){	 
@@ -15,7 +16,7 @@
 	function init(){
 	if(window != window.top) return;
 	
-        try{        
+        try{
             $(".ui-dialog-dd").css({'width':'95%','left':'3%','height':'90%','top':'5%'});
             $(".ui-dialog-bd,.setting ").css({'width':'99%','height':'98%'});
         }catch(e){
