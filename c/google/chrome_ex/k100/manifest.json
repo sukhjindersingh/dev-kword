@@ -1,0 +1,27 @@
+{
+  "name": "Express query",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "The Express query. by kick.smiles@gmail.com",
+  "browser_action": {
+		"default_icon":"16.png",   
+		"default_popup": "popup.html",
+		"default_title":"Express query By Kick"
+  },
+  
+  "icons": {
+      "16": "16.png",
+      "48": "48.png"
+   },
+   "permissions": [
+    "tabs",
+    "contextMenus",
+	"*://*/*"
+
+  ],	
+  "background": {
+    "scripts": ["jquery.js","menus.js"],
+    "css":["css/all.css"]
+  }
+  
+}

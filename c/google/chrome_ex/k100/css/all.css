@@ -1,0 +1,53 @@
+body ,html{
+	width:auto;
+	height:auto;
+	min-height:100px;	
+    overflow-x:hidden;
+
+	
+  }
+#form{
+	width:580px;
+	height:auto;
+	}
+#form #number{
+	width:265px;
+	height:28px;
+	color:#09F;
+	line-height:26px;
+	font-size:26px;
+	text-align:center;
+	}
+#result_content{
+	border:1px solid #FFC;
+	margin:0 0;
+	padding-top:5px;
+	text-align:center;
+	}
+#by{
+	 color:#3C3;
+	 text-align:right;
+	 position:fixed;
+	 right:10px;
+	 bottom:2px;
+	 
+	}
+#set ul{
+	width:500px;
+	text-align:left;
+	height:22px;
+	overflow:hidden;
+	}
+#set ul li{
+	list-style-type:none;
+	width:150px;
+	float:left;
+	text-align:center;
+
+    }
+	
+
+#hr{
+	color:#033;
+	margin:10px 0px;
+	}
