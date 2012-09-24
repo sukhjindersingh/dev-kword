@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>Getting Started Extension's Popup</title>
+
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+    <link  type="text/css" href="css/all.css" rel="stylesheet"/>
+  </head>
+   <body>
+   
+  	    <div id="set" style="display:none">
+         <ul>
+            <li><a href="javascript:void();">历史订单</a></li>
+            <li> <a href="javascript:void();">订单自动查询提醒</a></li>
+            <li> <a href="javascript:void();">设置</a></li>
+         </ul>
+        </div>
+        
+        
+        
+   		<div id="form">
+        	<label for="opt">快递类型:</label>
+            <select id="opt">
+            	<option  value="yuantong">圆通</option>
+            	<option  value="yunda">韵达</option>
+                <option value="shentong">申通</option>
+            </select>
+            
+            <label for="number">订单编号:</label><input id="number" autocomplete="on"/>
+            <button id="query" tabindex="2">查新</button>
+        </div>
+        <div id="result_content"></div>
+        
+        <div id="by">©2012 By kick</div>
+  </body>
+</html>
