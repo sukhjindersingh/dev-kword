@@ -1,0 +1,16 @@
+
+mklink  /d 使用
+
+
+C:\Users\kicks_000\AppData\Local\Google\Chrome\User Data\Default
+
+D:\软件配置\Google\Chrome\User Data
+
+
+
+2.2 Chrome
+        a. 关闭正在运行的chrome，备份并删除C:\Users\用户名\AppData\Local\Google\Chrome\User Data
+         b. 打开CMD输入命令
+            mklink /d "C:\Users\用户名\AppData\Local\Google\Chrome\User Data" "D:\Data\Chrome.userData"
+        注意1：当D盘的Chromium.userData文件夹和Chrome.userData文件夹存在的时候，会出现命令无法执行的情况。需要先删除或者先改名，建立连接之后，再把内容copy进D盘下面的文件夹。
+       注意2：数据很重要，随时要保存！在进行任何你认为有可能会有风险的操作时，请先将数据打包一个zip包，以防数据丢失！
