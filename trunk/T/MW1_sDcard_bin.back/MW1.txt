@@ -1,0 +1,33 @@
+官方支援：http://www.sonymobile.com/global-zh/support/accessories/smart-wireless-headset-pro/  复制到浏览器
+
+ 
+中文说明书下载地址：http://www-support-downloads.sonymobile.com/mw1/userguide_ZS_MW1_1258-0314.1.pdf(复制到迅雷新建下载)
+
+ 
+MW1在iphone上也能作蓝牙耳机，接听电话~ 但不支持部分需要软件实现的功能（例如查找手机，语音朗读等）
+
+
+升級
+
+透過 micro SD 卡升級指示：
+1. 將smartwirelessheadsetpro.bin（http://semc-bnw-support-prod.s3.amazonaws.com/Software%20Downloads/smartwirelessheadsetpro.bin复制到迅雷新建） 檔案放在 micro-SD 卡的根目錄中
+2. 重新啟動專業級智慧型無線耳機
+3. 在啟動時執行升級。
+
+軟體改良功能：
+- 有些非 Android 手機也會顯示來電者名稱
+- 非 Android 手機也會顯示正確名稱。
+- 改善與某些 micro SD 卡類型的相容性。- 各項改良功能。
+
+关于MW1放入大容量TF卡识别为2.XG的解决办法：
+
+将tf卡用读卡器在电脑上格式化一次 ，放入BIN文件语言包 卡内根目录新建一个music文档，放入音乐，然后插入MW1 用机器读取（稍微有点慢）读取完成后就好了
+
+MW1电脑端管理软件mediago下载地址：
+
+http://mediago.sony.com/chs/download
+
+死机解决办法:用音量键+开关机键，可以关机.
+
+最后时尚潮流网全体员工祝您网购愉快，如果有需要咨询的可以随时与我们联系，谢谢您的支持与信任。
+
