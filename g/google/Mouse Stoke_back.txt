@@ -1,1 +1,168 @@
-{"version":1.951,"trigger":2,"timeout":6000,"minstep":20,"trail":"black","trail_width":1,"newtab_target":"chrome://newtab/","newtab_position":"+1","suppress":true,"last_tab_close_win":true,"custom_req_ctrlkey":true,"enable_dnd":true,"enable_animation":true,"search_engine":"http://www.google.com/search?q=","blacklist":"","categories":{"navigation":{"to-page-top":[],"to-page-bottom":[],"scroll-up-one-page":[],"scroll-down-one-page":[],"history-back":["L","R"],"history-forward":["R","L"],"previous-tab":["D","L"],"next-tab":["D","R"],"first-tab":[],"last-tab":[],"upper-level-in-url":[],"increase-number-in-url":[],"decrease-number-in-url":[],"open-homepage":[]},"window":{"new-window":[],"close-window":[],"maximize-window":[]},"tab":{"new-tab":[],"close-tab":["D"],"undo-close-tab":["D","U"],"detach-tab":[],"duplicate-tab":[],"close-tab-to-the-left":[],"close-tab-to-the-right":[],"close-all-tabs-to-the-left":[],"close-all-tabs-to-the-right":[],"close-other-tabs":["U"]},"link":{"open-link-in-new-window":[],"open-link-in-new-background-tab":["R"],"open-link-in-new-foreground-tab":["L"],"bookmark-this-link":[]},"image":{"view-image":[]},"bookmark":{"bookmark-this-page":[],"remove-bookmark":[]},"utilities":{"reload":[],"skip-cache-reload":["U","D"],"stop-page-loading":[],"text-zoom-in":[],"text-zoom-out":[],"text-zoom-reset":[],"search-selected-text":[],"view-source":[],"take-screenshot":["D","R","U","D","U"]},"other":{"mouse-stroke-options":[]}},"customs":{"userdef#Hide%20all%20images%20%28example%29":[],"userdef#Search%20in%20YouTube%20%28example%29":[]},"scripts":{"userdef#Hide%20all%20images%20%28example%29":{"frame":"all","script":"var imgs = document.getElementsByTagName('img');\nfor (var i = imgs.length - 1; i >= 0; --i) {\n\timgs[i].parentNode.removeChild(imgs[i])\n}"},"userdef#Search%20in%20YouTube%20%28example%29":{"frame":"top","script":"location.href = 'http://www.youtube.com/results?search_query=' + _env.seltext;"}},"rockers":{"R":"next-tab","L":"previous-tab"},"wheels":{"U":"text-zoom-in","D":"text-zoom-out","L":"","R":""},"drags":{"U":"open-link-in-new-window","D":"bookmark-this-link","L":"open-link-in-new-background-tab","R":"open-link-in-new-foreground-tab"},"strokes":{"to-page-top":[],"to-page-bottom":[],"scroll-up-one-page":[],"scroll-down-one-page":[],"history-back":["L","R"],"history-forward":["R","L"],"previous-tab":["D","L"],"next-tab":["D","R"],"first-tab":[],"last-tab":[],"upper-level-in-url":[],"increase-number-in-url":[],"decrease-number-in-url":[],"open-homepage":[],"new-window":[],"close-window":[],"maximize-window":[],"new-tab":[],"close-tab":["D"],"undo-close-tab":["D","U"],"detach-tab":[],"duplicate-tab":[],"close-tab-to-the-left":[],"close-tab-to-the-right":[],"close-all-tabs-to-the-left":[],"close-all-tabs-to-the-right":[],"close-other-tabs":["U"],"open-link-in-new-window":[],"open-link-in-new-background-tab":["R"],"open-link-in-new-foreground-tab":["L"],"bookmark-this-link":[],"view-image":[],"bookmark-this-page":[],"remove-bookmark":[],"reload":[],"skip-cache-reload":["U","D"],"stop-page-loading":[],"text-zoom-in":[],"text-zoom-out":[],"text-zoom-reset":[],"search-selected-text":[],"view-source":[],"take-screenshot":["D","R","U","D","U"],"mouse-stroke-options":[]}}
+{
+  "normal": {
+    "gesture": true,
+    "drag": true,
+    "scroll": false,
+    "autocancel": false,
+    "autocancelvalue": 2,
+    "lasttab": false,
+    "scrolleffects": true,
+    "newtabposition": "chrome"
+  },
+  "gesture": {
+    "gestureui": true,
+    "stroke": true,
+    "direct": true,
+    "tooltip": true,
+    "strokecolor": "9429FF",
+    "strokewidth": 5,
+    "strokeopa": 0.8,
+    "directcolor": "881023",
+    "directopa": 0.9,
+    "tooltipcolor": "120310",
+    "tooltipwidth": 18,
+    "tooltipopa": 0.9,
+    "geskey": "right",
+    "stenable": false,
+    "gholdkey": "shift",
+    "gesture": [
+      {
+        "direct": "D",
+        "action": "G_close"
+      },
+      {
+        "direct": "DU",
+        "action": "G_reloadclear"
+      },
+      {
+        "direct": "UD",
+        "action": "G_reloadall"
+      },
+      {
+        "direct": "R",
+        "action": "G_righttab"
+      },
+      {
+        "direct": "L",
+        "action": "G_lefttab"
+      },
+      {
+        "direct": "RD",
+        "action": "G_newtab"
+      },
+      {
+        "direct": "DR",
+        "action": "G_down"
+      },
+      {
+        "direct": "DL",
+        "action": "G_up"
+      },
+      {
+        "direct": "DRU",
+        "action": "G_top"
+      },
+      {
+        "direct": "URD",
+        "action": "G_bottom"
+      },
+      {
+        "direct": "DRUL",
+        "action": "G_fullscreen"
+      }
+    ]
+  },
+  "drag": {
+    "dragui": true,
+    "dstroke": true,
+    "ddirect": true,
+    "dtooltip": true,
+    "dstrokecolor": "9429FF",
+    "dstrokewidth": 5,
+    "dstrokeopa": 0.8,
+    "ddirectcolor": "881023",
+    "ddirectopa": 0.9,
+    "dtooltipcolor": "120310",
+    "dtooltipwidth": 18,
+    "dtooltipopa": 0.9,
+    "dragtext": true,
+    "draglink": true,
+    "dragimage": true,
+    "draginput": false,
+    "setdragurl": true,
+    "imgfirstcheck": false,
+    "imgfirst": "none",
+    "dholdkey": "none",
+    "text": [
+      {
+        "direct": "L",
+        "action": "T_gsearchback"
+      },
+      {
+        "direct": "R",
+        "action": "T_gsearch"
+      },
+      {
+        "direct": "D",
+        "action": "T_copytext"
+      }
+    ],
+    "link": [
+      {
+        "direct": "L",
+        "action": "L_openback"
+      },
+      {
+        "direct": "R",
+        "action": "L_open"
+      },
+      {
+        "direct": "D",
+        "action": "L_copytext"
+      },
+      {
+        "direct": "U",
+        "action": "L_copyurl"
+      }
+    ],
+    "image": [
+      {
+        "direct": "D",
+        "action": "I_openback"
+      },
+      {
+        "direct": "U",
+        "action": "I_open"
+      }
+    ]
+  },
+  "scroll": {
+    "smooth": false,
+    "scrollspeed": 3,
+    "scrollaccele": 1
+  },
+  "scrollgesture": {
+    "tablist": false,
+    "tablistkey": "right",
+    "sgsleft": [
+      {
+        "direct": "L",
+        "action": "G_back"
+      },
+      {
+        "direct": "R",
+        "action": "G_go"
+      }
+    ],
+    "sgsright": [
+      {
+        "direct": "L",
+        "action": "G_back"
+      },
+      {
+        "direct": "R",
+        "action": "G_go"
+      }
+    ]
+  }
+}
