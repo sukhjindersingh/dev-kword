@@ -1,0 +1,14 @@
+{
+  "name": "Search for baidu @Kick",
+  "description": "selected Text search for baidu.com  By kick email:kick.smiles@gmail.com", 
+  "version": "0.6",
+  "icons": {
+      "16": "16.png",
+      "48": "48.png"
+   },
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["jquery.js","menus.js"]
+  },
+  "manifest_version": 2
+}
