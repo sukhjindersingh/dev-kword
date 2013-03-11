@@ -1,0 +1,14 @@
+{
+  "name": "Translate @Kick",
+  "description": " chenese and English auto translat",
+  "version": "0.6",
+  "icons": {
+      "16": "16.png",
+      "48": "48.png"
+   },
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["jquery.js","menus.js"]
+  },
+  "manifest_version": 2
+}

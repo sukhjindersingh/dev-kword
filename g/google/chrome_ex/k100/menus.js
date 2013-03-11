@@ -3,7 +3,7 @@
 //console log func....
 
 
-var pageed     = chrome.contextMenus.create({"title": "快递查询选项", "contexts":["page"],"onclick": genericOnClick});
+var pageed       = chrome.contextMenus.create({"title": "快递查询选项", "contexts":["page"],"onclick": genericOnClick});
 var selectedyt   = chrome.contextMenus.create({"title": "圆通", "contexts":["selection"],"onclick": KQueryonClickYT});
 var selectedst   = chrome.contextMenus.create({"title": "申通", "contexts":["selection"],"onclick": KQueryonClickST});
 var selectedyd   = chrome.contextMenus.create({"title": "韵达", "contexts":["selection"],"onclick": KQueryonClickYD});
@@ -11,6 +11,8 @@ var selectedsf   = chrome.contextMenus.create({"title": "顺丰", "contexts":["s
 var selectedtt   = chrome.contextMenus.create({"title": "天天", "contexts":["selection"],"onclick": KQueryonClickTT});
 var selectedht   = chrome.contextMenus.create({"title": "汇通", "contexts":["selection"],"onclick": KQueryonClickHT});
 var selectedzt   = chrome.contextMenus.create({"title": "中通", "contexts":["selection"],"onclick": KQueryonClickZT});
+
+
 
 var linked     = chrome.contextMenus.create({"title": "转到连接", "contexts":["link"],"onclick": genericOnClick});
 var imageed    = chrome.contextMenus.create({"title": "查看图片", "contexts":["image"],"onclick": genericOnClick});
@@ -24,6 +26,11 @@ function genericOnClick(info, tab) {
   console.log("info: " + JSON.stringify(info));
   console.log("tab: " + JSON.stringify(tab));
 }
+
+
+
+
+
 // kuaidi query func
 function KQueryonClickYT(info,tab){
     Querys(info,tab,"yuantong");
