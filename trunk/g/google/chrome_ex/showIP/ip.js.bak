@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var useRightList		= [];
 
 	useRightList.push( 'http://www.google.com' );
-	useRightList.push( 'http://weibo.com/jeskick' );
+	useRightList.push( 'weibo.com/jeskick' );
 		
 	gloabalSetPosition = ( $.inArray( window.location.host, useRightList ) >= 0 ) ? 'right' : 'left';
 
