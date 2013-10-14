@@ -1,6 +1,13 @@
 YouTube HD Suite
 YouTube HD Lite Revived
 
+http://userscripts.org/scripts/source/47636.user.js
+http://userscripts.org/scripts/source/114002.user.js
+
+
+
+
+
 
 http://userscripts.org/scripts/source/25105.user.js
 
