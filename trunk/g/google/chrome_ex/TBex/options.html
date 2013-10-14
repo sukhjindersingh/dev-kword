@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Thanks</title>
+        <title>TB ex setting </title>
 
     <link  type="text/css" href="css/all.css" rel="stylesheet"/>  
     <script type="text/javascript" src="js/jq17.js"></script>
@@ -9,21 +9,36 @@
     </head>
     <body>
         <div class="body">
+		<p id="conf_msg"></p>
 		<pre>
-
-
-
-
-
-
-										<font size="+10">设置页面</font>
-
-
-
-
+									<font size="+10">设置页面</font>
 
 
 		</pre>
+
          </div>
+		<div class="body notific_body">
+			<span>Notification setting</span>
+			 <h2>Options</h2>
+    <form id="options">
+      <input type="checkbox" name="isActivated" checked>
+		通知显示时间间隔
+      <select name="frequency">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+      </select>
+      minute(s|分).
+    </form>
+			
+
+		</div>
     </body>
 </html>
