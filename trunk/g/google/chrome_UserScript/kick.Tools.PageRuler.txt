@@ -1,0 +1,60 @@
+// ==UserScript==
+// @name      kick.Tools.PageRuler
+// @namespace  
+// @version    0.1
+// @description  enter something useful
+// @include    *.*
+// @require   http://code.jquery.com/jquery-1.7.2.min.js
+// @copyright  2011+, kick kick.smiles@gmail.com
+// ==/UserScript==
+/* ****
+   ****
+   ****  if(window != window.top) return;       //The return not main ifreame..
+   ****
+   **** */
+
+(function(window, document) {
+  if (window != window.top) {
+    return null;
+  } else { //The return not main ifreame..
+    var _D = function(_obj) {
+      document.body.appendChild(_obj);
+    }
+    var LOG = function(e) {
+      console.error(new Date() + " : " + e);
+    }
+    var g = window.location.href;   
+    
+    function insertKDOM() {       
+      var _js = document.createElement("script");
+      _js.setAttribute('id', 'k_js');
+      _js.setAttribute('type', 'text/javascript');
+        _js.setAttribute('src','http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js');       
+					    
+      document.getElementsByTagName('body')[0].appendChild(_js);
+        
+	  var _jss = document.createElement("script");
+      _jss.setAttribute('id', 'k_jss');
+      _jss.setAttribute('type', 'text/javascript');
+      _jss.setAttribute('src','http://www.zhangxinxu.com/study/js/jquery.zxxPageRuler.1.1.js');
+      document.getElementsByTagName('head')[0].appendChild(_jss);
+        
+        
+          var css = document.createElement("link");
+      css.setAttribute('id', 'k_css');
+      css.setAttribute('rel', 'stylesheet');
+      css.setAttribute('href','http://www.zhangxinxu.com/study/css/ruler.css');
+      document.getElementsByTagName('head')[0].appendChild(css);
+	  
+	  
+	          
+    }
+      function init(){
+          
+          insertKDOM():
+      }
+   
+    window.addEventListener('load', init, false);
+    
+  } // end Else window.Top
+})(window, document);
