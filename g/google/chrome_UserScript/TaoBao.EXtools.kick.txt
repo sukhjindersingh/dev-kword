@@ -1,0 +1,130 @@
+// ==UserScript==
+// @name       TaoBao.EXtools.kick
+// @namespace  http://taobao.k.ex
+// @version    0.1
+// @description  taobao sell time set 
+// @include    http://smf.taobao.com/smf_tab.htm?*&module=xsdz
+// @require   http://code.jquery.com/jquery-1.7.2.min.js
+// @copyright  2013+, kick
+// ==/UserScript==
+
+(function(window, document) {
+    
+   
+    myCookie = {
+    get: function(name) {
+        var arr,
+        reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg)) return unescape(arr[2]);
+        else return null
+    },
+    del: function(name) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval = this.get(name);
+        if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString()
+    },
+    set: function(name, value) {
+		var path="/";
+		var time="60d";
+        var strsec = this.getsec(time);
+        var exp = new Date();
+        exp.setTime(exp.getTime() + strsec * 1);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString()+";path="+(path==""?"/":path)
+    },
+    getsec: function(str) {
+        var str1 = str.substring(1, str.length) * 1;
+        
+        var str2 = str.substring(0, 1);
+        if (str2 == "s") {
+            return str1 * 1000
+        } else if (str2 == "h") {
+            return str1 * 60 * 60 * 1000
+        } else if (str2 == "d") {
+            return str1 * 24 * 60 * 60 * 1000
+        }
+    }
+};
+    
+    var _D = function(_obj) {
+      document.body.appendChild(_obj);  
+    }
+    var LOG = function(e) {
+      console.error(new Date() + " : " + e);
+    }   
+     
+    
+    function init() {
+        
+     insertKDOM();      
+     
+    } 
+    function insertKDOM() {
+  var _d = document.createElement('div');
+      _d.setAttribute('id', 'fk_div_num');
+      _d.innerHTML = "<button id='one_click' >设置第一步</button>"+
+          			"<button id='tow_click' >设置第二步</button>"+
+          			"<button id='show_click' >显示</button><button id='set_click' >自动设置</button>"	;
+      
+      _D(_d);     
+      var _css = document.createElement("style");
+      _css.setAttribute('id', '_css');
+      _css.setAttribute('type', 'text/css');
+        _css.innerHTML = "#fk_div_num{position:fixed;width:135px;padding:10px 5px; top:50px;right:200px;z-index:9999;background:#FFC;padding:10px 5px; }" +	 
+					   "#fk_div_num button{ margin:5px 5px; font-size:14px; padding:4px 4px;cursor:pointer; }"+
+            "#fk_div_num input{text-align:center;}"+
+	                   "#k_drag{position:absolute;width:400px;height:300px;top:20px;right:10px;border:1px solid red;z-index:9999;}"; //拖动 CSS 样式						   
+					    
+      document.getElementsByTagName('head')[0].appendChild(_css);
+	
+      
+        
+       $("#SellerDashBoard2").attr("name","SellerDashBoard2");
+        
+
+        
+        $("#one_click").click(function(){
+
+            $("input[name=limitPromotionName]",window.frames["SellerDashBoard2"].document).val("111kk");
+            $("input[name=startDate]",window.frames["SellerDashBoard2"].document).val("2013-08-14");
+            $("input[name=expiredDate]",window.frames["SellerDashBoard2"].document).val("2013-08-15");
+        });
+        
+        $("#tow_click").click(function(){
+            var itemS;
+            
+            $("#J_TBL_Step2nd tbody tr",window.frames["SellerDashBoard2"].document).each(function(){              
+                
+                var itemID  = $(this).find("input[name=itemId]").val();
+              //  var checkED = $(this).find("input[name=itemId]").attr("checked");
+            });
+            
+            
+        });
+        
+        $("#show_click").click(function(){
+            	//myCookie.set("afa","test");
+               $("#J_TBL_Step3rd").attr("name","J_TBL_Step3rd");
+            
+            
+            $("#J_TBL_Step3rd tbody tr",window.frames["SellerDashBoard2"].document).each(function(){
+                var id = $(this).find("input[name=itemId]").val();
+                
+                var d=$(this).find(".cell-discount-adjust").find('input[name=discountRate]').val();
+                
+                $(this).find(".cell-discount-adjust").find('input[name=discountRate]').change(function(){
+               		alert($(this).val());     
+                })
+                
+              
+                
+            });
+            
+        });       
+
+    }
+   
+    window.addEventListener('load', init, false);   
+   // end Else window.Top
+})(window, document);
+
